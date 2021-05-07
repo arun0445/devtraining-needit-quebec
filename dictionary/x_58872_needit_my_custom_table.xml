@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="My custom table" max_length="40" name="x_58872_needit_my_custom_table" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Dummy data" max_length="40" name="u_calendar_date_time_5" type="calendar_date_time"/>
+        <element attributes="encode_utf8=false" label="Requested for" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="financial" label="Request type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="HR" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Financial" sequence="2" value="financial"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="financial 1" label="What needed" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="HR 1" sequence="0" value="hr 1"/>
+                <element inactive_on_update="false" label="HR 2" sequence="1" value="hr 2"/>
+                <element inactive_on_update="false" label="Facilities 1" sequence="2" value="facilities 1"/>
+                <element inactive_on_update="false" label="Facilities 2" sequence="3" value="facilities 2"/>
+                <element inactive_on_update="false" label="Financial 1" sequence="4" value="financial 1"/>
+                <element inactive_on_update="false" label="Financial 2" sequence="5" value="financial 2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
